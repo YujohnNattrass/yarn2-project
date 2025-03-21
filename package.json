@@ -1,0 +1,30 @@
+{
+  "name": "yarn-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "build:packages": "turbo run build --filter=shared-utils",
+    "build:apps": "turbo run build --filter=mastra-app",
+    "build:shared-utils": "turbo run build --filter=shared-utils",
+    "build:mastra": "turbo run build --filter=mastra-app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "turbo": "^2.4.4"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "apps/*/.mastra/output"
+  ],
+  "packageManager": "yarn@4.7.0"
+}

@@ -1,0 +1,13 @@
+node_modules
+*/node_modules/
+.env*
+.mastra
+.turbo
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
